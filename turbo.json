@@ -1,0 +1,71 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalDependencies": ["**/.env.*local", ".env", "tsconfig.json"],
+  "globalEnv": ["NODE_ENV", "CONVEX_DEPLOYMENT", "CONVEX_URL"],
+
+  "pipeline": {
+    "=== SHARED PACKAGES ===": {
+      "cache": false
+    },
+
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**", "build/**", "lib/**"],
+      "inputs": ["src/**", "tsconfig.json"]
+    },
+
+    "typecheck": {
+      "dependsOn": ["^build"],
+      "outputs": [],
+      "inputs": ["src/**", "tsconfig.json"]
+    },
+
+    "lint": {
+      "outputs": [],
+      "inputs": ["src/**", "*.config.{js,ts}"]
+    },
+
+    "lint:fix": {
+      "cache": false,
+      "outputs": ["src/**"]
+    },
+
+    "test": {
+      "dependsOn": ["build"],
+      "outputs": ["coverage/**"],
+      "inputs": ["src/**", "test/**", "**/*.test.{ts,tsx}"]
+    },
+
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+
+    "clean": {
+      "cache": false
+    },
+
+    "=== MOBILE SPECIFIC ===": {
+      "cache": false
+    },
+
+    "mobile:ios": {
+      "cache": false,
+      "persistent": true
+    },
+
+    "mobile:android": {
+      "cache": false,
+      "persistent": true
+    },
+
+    "pod-install": {
+      "cache": false,
+      "inputs": ["ios/Podfile", "package.json"]
+    }
+  },
+
+  "remoteCache": {
+    "enabled": false
+  }
+}
