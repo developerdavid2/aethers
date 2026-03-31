@@ -128,3 +128,13 @@ dist/
 # ============================================
 *.prof
 *.hprof
+
+
+
+# AI Agent Configs
+.agents/
+.claude/
+.claude-code/
+.junie/
+.cursor/
+.vscode-insiders/
