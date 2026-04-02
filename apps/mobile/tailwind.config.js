@@ -1,13 +1,21 @@
 const { hairlineWidth } = require('nativewind/theme');
-const { Colors } = require('./src/lib/constants');
+const { Colors } = require('./src/shared/constants/colors');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: 'class',
-  content: ['./App.tsx', './src/**/*.{js,jsx,ts,tsx}', './components/**/*.{js,jsx,ts,tsx}'],
+  content: ['./src/**/*.{js,jsx,ts,tsx}', './src/app/App.tsx'],
   presets: [require('nativewind/preset')],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['MonaSans-Regular'],
+        'sans-light': ['MonaSans-Light'],
+        'sans-medium': ['MonaSans-Medium'],
+        'sans-semibold': ['MonaSans-SemiBold'],
+        'sans-bold': ['MonaSans-Bold'],
+        'sans-black': ['MonaSans-Black'],
+      },
       colors: {
         // Light mode as defaults — dark mode switched via NativeWind class
         background: Colors.light.background,

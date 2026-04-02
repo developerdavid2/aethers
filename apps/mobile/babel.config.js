@@ -4,10 +4,21 @@ module.exports = {
     [
       'module-resolver',
       {
-        root: ['./src'],
+        root: ['./'],
         alias: {
           '@': './src',
-          '~': './src',
+
+          '@ui': './src/shared/ui',
+          '@components': './src/shared/components',
+          '@utils': './src/shared/utils',
+          '@hooks': './src/shared/hooks',
+          '@constants': './src/shared/constants',
+
+          '@core': './src/core',
+          '@modules': './src/modules',
+          '@role': './src/role',
+          '@config': './src/config',
+          '@assets': './src/assets',
         },
         extensions: ['.ios.js', '.android.js', '.js', '.ts', '.tsx', '.json'],
       },

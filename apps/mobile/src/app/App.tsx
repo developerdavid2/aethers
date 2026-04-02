@@ -1,8 +1,9 @@
 import { StatusBar, Text, View } from 'react-native';
-import './global.css';
-import { Button } from './src/components/ui/button';
-import { useColorScheme } from './src/hooks/useColorScheme';
-import { Colors } from './src/lib/constants';
+import '../global.css';
+// import { Button } from '../shared/ui/button';
+import { useColorScheme } from '@/shared/hooks/useColorScheme';
+import { Colors } from '@/shared/constants/colors';
+import { Button } from '@/shared/ui/button';
 
 export default function App() {
   const { colorScheme, isDarkColorScheme, toggleColorScheme } = useColorScheme();
@@ -16,15 +17,17 @@ export default function App() {
         backgroundColor={Colors[colorScheme].background}
       />
 
-      {/* Title */}
+      {/* Title with Mona Sans Bold */}
       <Text
-        className="text-4xl font-bold tracking-tight"
+        className="text-4xl font-sans-bold tracking-tight"
         style={{ color: Colors[colorScheme].foreground }}>
         AETHER
       </Text>
 
-      {/* Subtitle */}
-      <Text style={{ color: Colors[colorScheme].mutedForeground }}>AI Field Intelligence OS</Text>
+      {/* Subtitle with Mona Sans Regular */}
+      <Text className="font-sans" style={{ color: Colors[colorScheme].mutedForeground }}>
+        AI Field Intelligence OS
+      </Text>
 
       {/* Card */}
       <View
@@ -34,10 +37,12 @@ export default function App() {
           borderWidth: 1,
           borderColor: Colors[colorScheme].border,
         }}>
-        <Text className="font-semibold text-lg" style={{ color: Colors[colorScheme].foreground }}>
+        <Text
+          className="font-sans-semibold text-lg"
+          style={{ color: Colors[colorScheme].foreground }}>
           Inspection #001
         </Text>
-        <Text style={{ color: Colors[colorScheme].mutedForeground }}>
+        <Text className="font-sans" style={{ color: Colors[colorScheme].mutedForeground }}>
           Bridge structural assessment — Lagos Island
         </Text>
 
@@ -45,14 +50,14 @@ export default function App() {
           <View
             className="px-3 py-1 rounded-full"
             style={{ backgroundColor: Colors.brand.danger + '33' }}>
-            <Text className="text-xs font-semibold" style={{ color: Colors.brand.danger }}>
+            <Text className="text-xs font-sans-medium" style={{ color: Colors.brand.danger }}>
               HIGH RISK
             </Text>
           </View>
           <View
             className="px-3 py-1 rounded-full"
             style={{ backgroundColor: Colors.brand.success + '33' }}>
-            <Text className="text-xs font-semibold" style={{ color: Colors.brand.success }}>
+            <Text className="text-xs font-sans-medium" style={{ color: Colors.brand.success }}>
               SYNCED
             </Text>
           </View>
@@ -65,19 +70,21 @@ export default function App() {
         className="w-full flex-col items-start gap-2 rounded-xl p-6 h-auto min-h-[120px] active:opacity-80"
         style={{ backgroundColor: Colors[colorScheme].primary }}>
         <Text
-          className="text-lg font-bold"
+          className="text-lg font-sans-bold"
           style={{ color: Colors[colorScheme].primaryForeground }}>
           Toggle Theme
         </Text>
         <Text
-          className="text-sm opacity-80"
+          className="text-sm font-sans opacity-80"
           style={{ color: Colors[colorScheme].primaryForeground }}>
           Switch between light and dark mode
         </Text>
       </Button>
 
       {/* Current Theme Indicator */}
-      <Text style={{ color: Colors[colorScheme].mutedForeground }}>Current: {colorScheme}</Text>
+      <Text className="font-sans" style={{ color: Colors[colorScheme].mutedForeground }}>
+        Current: {colorScheme}
+      </Text>
     </View>
   );
 }

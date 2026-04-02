@@ -1,5 +1,5 @@
 import { useColorScheme } from './useColorScheme';
-import { Colors } from '../lib/constants';
+import { Colors } from '../constants/colors';
 
 // Colors.light and Colors.dark have the same keys
 type ColorKey = keyof typeof Colors.light;

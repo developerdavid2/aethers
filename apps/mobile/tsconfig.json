@@ -3,13 +3,21 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "src/*"
-      ],
-      "~/*": [
-        "src/*"
-      ]
+      "@/*": ["src/*"],
+
+      "@ui/*": ["src/shared/ui/*"],
+      "@components/*": ["src/shared/components/*"],
+      "@utils/*": ["src/shared/utils/*"],
+      "@hooks/*": ["src/shared/hooks/*"],
+      "@constants/*": ["src/shared/constants/*"],
+
+      "@core/*": ["src/core/*"],
+      "@modules/*": ["src/modules/*"],
+      "@role/*": ["src/role/*"],
+      "@config/*": ["src/config/*"],
+      "@assets/*": ["src/assets/*"]
     },
+
     "skipLibCheck": true,
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
@@ -22,16 +30,11 @@
   },
   "include": [
     "src/**/*",
-    "App.tsx",
+    "src/app/App.tsx",
     "global.css",
     "**/*.ts",
     "**/*.tsx",
     "nativewind-env.d.ts"
   ],
-  "exclude": [
-    "node_modules",
-    "babel.config.js",
-    "metro.config.js",
-    "jest.config.js"
-  ]
+  "exclude": ["node_modules", "babel.config.js", "metro.config.js", "jest.config.js"]
 }

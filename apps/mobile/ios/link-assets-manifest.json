@@ -1,0 +1,37 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/fonts/MonaSans-Black.ttf",
+      "sha1": "75f7e1e1e069f539547a458418899df6652b1d2a"
+    },
+    {
+      "path": "src/assets/fonts/MonaSans-Bold.ttf",
+      "sha1": "c3b9802dcf48ac9ab8ce2bbf018797f90a6a04c0"
+    },
+    {
+      "path": "src/assets/fonts/MonaSans-ExtraBold.ttf",
+      "sha1": "9889945de5431204797518e2b47f3f9943e05ebb"
+    },
+    {
+      "path": "src/assets/fonts/MonaSans-ExtraLight.ttf",
+      "sha1": "99954aad1238d2a30c901d037d73740097c32096"
+    },
+    {
+      "path": "src/assets/fonts/MonaSans-Light.ttf",
+      "sha1": "3bee5ba8f953424e6fa113960b904873b31f4de3"
+    },
+    {
+      "path": "src/assets/fonts/MonaSans-Medium.ttf",
+      "sha1": "ccd209ca1e4237925f3e4a6b0cf37391958add54"
+    },
+    {
+      "path": "src/assets/fonts/MonaSans-Regular.ttf",
+      "sha1": "5f4faf0a2f9a7deb46f46bf3381f8ff13f743b6c"
+    },
+    {
+      "path": "src/assets/fonts/MonaSans-SemiBold.ttf",
+      "sha1": "95a5be61d20315481ea8fa4429a30a8bbc48b1eb"
+    }
+  ]
+}
